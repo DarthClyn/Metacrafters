@@ -30,7 +30,7 @@ function getTotalSupply() {                                         // Printing 
    console.log(NFTs.length);
 
 }
-
+//Driver CODE
 mintNFT("Darth","Yellow","Black","Locket");                          // Calling  functions below this line
 mintNFT("Zhits","Blue","Green","Chain");
 listNFTs();
