@@ -1,10 +1,10 @@
 TOKEN
 
-Create a solidity smart contract that can mint and burn tokens as well as show balance of given address
+
 
 ## Description
 
-An
+A solidity smart contract that can mint and burn tokens as well as show balance of given address
 
 ## Getting Started
 
