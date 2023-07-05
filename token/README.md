@@ -26,7 +26,7 @@ Use remix online compiler
   1. This contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
      Code:
      ```
-         string public tokenName = "DARTH COIN";
+     string public tokenName = "DARTH COIN";
     string public tokenAbrrv = "DRT";
     uint public totalSupply = 0;
     ```
