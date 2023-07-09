@@ -1,10 +1,8 @@
-TOKEN
-
-Create a solidity smart contract that can mint and burn tokens as well as show balance of given address
+# TOKEN
 
 ## Description
 
-An
+A solidity smart contract that can mint and burn tokens as well as show balance of given address
 
 ## Getting Started
 
@@ -25,37 +23,42 @@ Use remix online compiler
   
   The contract should obey:
   
-     1. This contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
+  1. This contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
      Code:
-         string public tokenName = "DARTH COIN";
+     ```
+     string public tokenName = "DARTH COIN";
     string public tokenAbrrv = "DRT";
     uint public totalSupply = 0;
-    2. This contract will have a mapping of addresses to balances (address => uint)
+    ```
+  2. This contract will have a mapping of addresses to balances (address => uint)
     Code:
+```
     mapping(address=>uint) public balances;
-    
-    3. We will have a mint function that takes two parameters: an address and a value. 
+```
+3. We will have a mint function that takes two parameters: an address and a value. 
        The function then increases the total supply by that number and increases the balance 
-       of the “sender” address by that amount
-       
-            Code:
+       of the “sender” address by that amount    
+    Code:
+```
          function mint(address _address, uint _value)public{
         totalSupply+=_value;
         balances[_address]+=_value;
     }
-    4. My contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. 
+```
+  4. My contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. 
        It will take an address and value just like the mint functions. It will then deduct the value from the total supply 
        and from the balance of the “sender”.
     5. Lastly, our burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
        to the amount that is supposed to be burned.
        Code:
+```
            function burn(address _address, uint _value)public{
         if (balances[_address]>= _value){
         totalSupply-=_value;
         balances[_address]-=_value;
         }
     }
-
+```
 
 
 ## Authors
