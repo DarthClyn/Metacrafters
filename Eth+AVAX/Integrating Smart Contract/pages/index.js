@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import atm_abi from "../artifacts/contracts/Assessment.sol/Assessment.json";
+import atm_abi from "../artifacts/contracts/SCM.sol/SCM.json";
 import backgroundImage from "../assets/background-image.jpg";
 
 export default function HomePage() {
@@ -12,6 +12,7 @@ export default function HomePage() {
   const [showAccount, setShowAccount] = useState(false);
   const [depositAmount, setDepositAmount] = useState("");
   const [withdrawAmount, setWithdrawAmount] = useState("");
+  const [buyItem, setbuyItem] = useState("");
 
   const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
   const atmABI = atm_abi.abi;
@@ -82,6 +83,15 @@ export default function HomePage() {
       await tx.wait();
       getBalance();
       setWithdrawAmount("");
+    }
+  };
+
+  const buy = async () => {
+    if (atm && buyItem) {
+      let tx = await atm.buy(buyItem);
+      await tx.wait();
+      getBalance();
+      setbuyItem("");
     }
   };
 
@@ -169,6 +179,51 @@ export default function HomePage() {
             style={{ width: "180px" }}
           />
         </div>
+        <div>
+        <table style={{ margin: "20px auto", borderCollapse: "collapse" }}>
+        <thead>
+          <tr>
+            <th style={{ border: "3px solid black", padding: "8px" }}>Item No.</th>
+            <th style={{ border: "3px solid black", padding: "8px" }}>NFT Name</th>
+            <th style={{ border: "3px solid black", padding: "8px" }}>Price (in ETH)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style={{ border: "3px solid black", padding: "8px" }}>1</td>
+            <td style={{ border: "3px solid black", padding: "8px" }}>EtherGlow</td>
+            <td style={{ border: "3px solid black", padding: "8px" }}>150</td>
+          </tr>
+          <tr>
+            <td style={{ border: "3px solid black", padding: "8px" }}>2</td>
+            <td style={{ border: "3px solid black", padding: "8px" }}>CryptoCanvas</td>
+            <td style={{ border: "3px solid black", padding: "8px" }}>200</td>
+          </tr>
+          <tr>
+            <td style={{ border: "3px solid black", padding: "8px" }}>3</td>
+            <td style={{ border: "3px solid black", padding: "8px" }}>DigitalDragon</td>
+            <td style={{ border: "3px solid black", padding: "8px" }}>600</td>
+          </tr>
+        </tbody>
+      </table>
+
+        </div>
+        <div>
+          <button
+            style={{ width: "200px", marginBottom: "10px", fontSize: "25px" }}
+            onClick={buy}
+          >
+            Buy Item
+          </button>
+          <input
+            type="number"
+            value={buyItem}
+            onChange={(e) => setbuyItem(e.target.value)}
+            placeholder="Enter item number"
+            style={{ width: "180px" }}
+          />
+        </div>
+        
       </div>
     );
   };
