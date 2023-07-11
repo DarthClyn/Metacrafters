@@ -15,7 +15,65 @@ Firstly, connect your wallet by clicking on connect wallet button.
 Your balance will be updated automatically after each transaction.
 You can deposit the balance into your account by clicking the deposit button.
 You can withdraw funds using Withdraw button.
+## Code
+  3 Events
+```
+    event Deposit(uint256 amount);
+    event Withdraw(uint256 amount);
+    event Buy(uint item);
+```
+4 Functions
+  To see current balance
 
+    function getBalance() public view returns(uint256){
+        return balance;
+    }
+To deposit ether
+
+    function deposit(uint256 _amount) public payable {
+        uint _previousBalance = balance;
+        require(msg.sender == owner, "You are not the owner of this account");
+        balance += _amount;
+        assert(balance == _previousBalance + _amount);
+
+        emit Deposit(_amount);
+    }
+  To withdraw ether
+
+    error InsufficientBalance(uint256 balance, uint256 withdrawAmount);
+    function withdraw(uint256 _withdrawAmount) public {
+        require(msg.sender == owner, "You are not the owner of this account");
+        uint _previousBalance = balance;
+        if (balance < _withdrawAmount) {
+            revert InsufficientBalance({
+                balance: balance,
+                withdrawAmount: _withdrawAmount
+            });
+        }
+        balance -= _withdrawAmount;
+        assert(balance == (_previousBalance - _withdrawAmount));
+        emit Withdraw(_withdrawAmount);
+    }
+
+  To Buy nft from shop
+  
+    function buy(uint256 item) external {
+        uint amount;
+        if (item ==1){
+            amount=150;
+        }
+        else if(item ==2){
+            amount=200;
+        }
+        else {
+            amount=600;
+        }
+        require(amount > 0, "Invalid redeem amount");
+        withdraw(amount);
+        emit Buy(item);
+    }
+}
+```
 ### Executing program
 ```
 Create a hardhat project and add your smart contract to it 
