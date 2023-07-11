@@ -73,7 +73,7 @@ To deposit ether
         emit Buy(item);
     }
 }
-```
+
 ### Executing program
 ```
 Create a hardhat project and add your smart contract to it 
@@ -92,6 +92,7 @@ After cloning the github, you will want to do the following to get the code runn
 
 After this, the project will be running on your localhost. 
 Typically at http://localhost:3000/
+
 ### Objective
   
  For this project, create a simple contract with 2-3 functions. Then show the values of those functions in frontend of the application.
