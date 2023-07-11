@@ -17,7 +17,12 @@ You can deposit the balance into your account by clicking the deposit button.
 You can withdraw funds using Withdraw button.
 
 ### Executing program
-
+```
+Create a hardhat project and add your smart contract to it 
+Add the front end files
+```
+OR
+```
 After cloning the github, you will want to do the following to get the code running on your computer.
 
 1. Inside the project directory, in the terminal type: npm i
@@ -25,6 +30,7 @@ After cloning the github, you will want to do the following to get the code runn
 3. In the second terminal type: npx hardhat node
 4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
 5. Back in the first terminal, type npm run dev to launch the front-end.
+```
 
 After this, the project will be running on your localhost. 
 Typically at http://localhost:3000/
@@ -33,7 +39,7 @@ Typically at http://localhost:3000/
  For this project, create a simple contract with 2-3 functions. Then show the values of those functions in frontend of the application.
 
 ### Video explanation
-  https://www.loom.com/share/76d2421311fa46b7b7a86c264662f695?sid=6a3f648f-a378-4bcf-86cd-050d0f861170
+  https://www.loom.com/share/92edb26d91264b28a0af312973be5762?sid=1a7896a2-f384-443b-8985-8c489d2b7c5e
 
 ## Authors
 
