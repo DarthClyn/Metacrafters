@@ -11,6 +11,8 @@ For this project, you will create a circuit using the dream programming language
 
 Create a hardhat project using typescript
 
+Write circuit code 
+
 Add the smart contract to the contracts folder (.sol)(to verify)
 
 Compile the contract
