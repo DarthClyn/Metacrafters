@@ -8,9 +8,8 @@ export default function HomePage() {
   const [account, setAccount] = useState(undefined);
   const [atm, setATM] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
-  const [showBalance, setShowBalance] = useState(false);
-  const [showAccount, setShowAccount] = useState(false);
-  const [depositAmount, setDepositAmount] = useState("");
+
+  
   const [withdrawAmount, setWithdrawAmount] = useState("");
   const [buyItem, setbuyItem] = useState("");
 
