@@ -23,6 +23,8 @@ Call for verification and deployment using a deploy file
 
 Verify on etherscan
 
+Note: change the file name in circuits to multiplier from PCircuit
+
 
 ### Objective
   
