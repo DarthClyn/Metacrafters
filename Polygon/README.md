@@ -10,10 +10,15 @@ For this project, you will create a circuit using the dream programming language
 ### Getting Started & Executing program
 
 Create a hardhat project using typescript
+
 Add the smart contract to the contracts folder (.sol)(to verify)
+
 Compile the contract
+
 Add the goerli testnetwork in hardhat.config file
+
 Call for verification and deployment using a deploy file
+
 Verify on etherscan
 
 
