@@ -1,11 +1,11 @@
+
 # Project:  Polygon ZK Circuit Implementation
 
 ## Description
 
 Problem statement:ZK SNARK Designer Imagine that you wake up, check your email, and you see an interesting task: Polygon is asking you to design a new ASNARK circuit that implements some logical operations. You need to implement the circuit and deploy a verifier on-chain to verify proofs generated from this circuit 
 For this project, you will create a circuit using the dream programming language that implements the following logical gate:
-
-
+![image](https://github.com/DarthNexus/Metacrafters/assets/98768438/fec7a5c4-5c76-47c8-a503-ca325f4be67a)
 
 ### Getting Started & Executing program
 
