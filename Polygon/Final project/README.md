@@ -114,6 +114,11 @@ Verify proof
             return false;
         }
 ```
+Calling verify proof in deply script
+```
+  const tx = await verifier.verifyProof(pi_a, pi_b, pi_c, input)
+
+```
 ### Video explanation
  ```https://www.loom.com/share/b7f9215218f7414791138a70c0dcf04d?sid=4f4987d6-0aa9-4664-8893-ce19c9a103e4```
 ## Authors
