@@ -55,8 +55,7 @@ Foundry (optionally)
 11. Run mumBal.js to check nft balnce on mumbai netwrok
   ```npx hardhat run scripts/mumBal.js --network mumbai```
 Notw: Ensure that you have enough balance of both mumbai & goerli network to pay the gas fees.          
-### Video explanation
-  ```[https://www.loom.com/share/62b7434f480a4f5c8be330e426034cf6](https://www.loom.com/share/571796b9c84b40c0b882a1ce83e97bb8?sid=2e33b9dd-7a8d-44df-adcd-bc662eadc2f7)```
+
 ## Authors
 
 harshitsani2002@gmail.com
